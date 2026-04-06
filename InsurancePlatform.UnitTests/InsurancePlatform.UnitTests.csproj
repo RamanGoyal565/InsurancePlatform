@@ -1,0 +1,76 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="xunit" />
+    <PackageReference Include="xunit.runner.visualstudio">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="coverlet.collector">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="..\IdentityService\Config\JwtOptions.cs" Link="Imported\Identity\JwtOptions.cs" />
+    <Compile Include="..\IdentityService\DTOs\RegisterRequest.cs" Link="Imported\Identity\RegisterRequest.cs" />
+    <Compile Include="..\IdentityService\DTOs\LoginRequest.cs" Link="Imported\Identity\LoginRequest.cs" />
+    <Compile Include="..\IdentityService\DTOs\CreateUserRequest.cs" Link="Imported\Identity\CreateUserRequest.cs" />
+    <Compile Include="..\IdentityService\Models\User.cs" Link="Imported\Identity\User.cs" />
+    <Compile Include="..\IdentityService\Repositories\IUserRepository.cs" Link="Imported\Identity\IUserRepository.cs" />
+    <Compile Include="..\IdentityService\Services\IIdentityService.cs" Link="Imported\Identity\IIdentityService.cs" />
+    <Compile Include="..\IdentityService\Services\IEventPublisher.cs" Link="Imported\Identity\IEventPublisher.cs" />
+    <Compile Include="..\IdentityService\Services\IPasswordHasherService.cs" Link="Imported\Identity\IPasswordHasherService.cs" />
+    <Compile Include="..\IdentityService\Services\IJwtTokenService.cs" Link="Imported\Identity\IJwtTokenService.cs" />
+    <Compile Include="..\IdentityService\Services\IdentityServices.cs" Link="Imported\Identity\IdentityServices.cs" />
+    <Compile Include="..\IdentityService\Services\PasswordHasherService.cs" Link="Imported\Identity\PasswordHasherService.cs" />
+    <Compile Include="..\IdentityService\Services\JwtTokenService.cs" Link="Imported\Identity\JwtTokenService.cs" />
+
+    <Compile Include="..\TicketService\DTOs\CreateTicketRequest.cs" Link="Imported\Ticket\CreateTicketRequest.cs" />
+    <Compile Include="..\TicketService\DTOs\UpdateTicketStatusRequest.cs" Link="Imported\Ticket\UpdateTicketStatusRequest.cs" />
+    <Compile Include="..\TicketService\DTOs\AssignTicketRequest.cs" Link="Imported\Ticket\AssignTicketRequest.cs" />
+    <Compile Include="..\TicketService\DTOs\AddCommentRequest.cs" Link="Imported\Ticket\AddCommentRequest.cs" />
+    <Compile Include="..\TicketService\Models\TicketModels.cs" Link="Imported\Ticket\TicketModels.cs" />
+    <Compile Include="..\TicketService\Models\Comment.cs" Link="Imported\Ticket\Comment.cs" />
+    <Compile Include="..\TicketService\Models\ClaimDetails.cs" Link="Imported\Ticket\ClaimDetails.cs" />
+    <Compile Include="..\TicketService\Repositories\ITicketRepository.cs" Link="Imported\Ticket\ITicketRepository.cs" />
+    <Compile Include="..\TicketService\Services\IEventPublisher.cs" Link="Imported\Ticket\IEventPublisher.cs" />
+    <Compile Include="..\TicketService\Services\IPolicyValidationService.cs" Link="Imported\Ticket\IPolicyValidationService.cs" />
+    <Compile Include="..\TicketService\Services\ITicketWorkflowService.cs" Link="Imported\Ticket\ITicketWorkflowService.cs" />
+    <Compile Include="..\TicketService\Services\TicketServices.cs" Link="Imported\Ticket\TicketServices.cs" />
+
+    <Compile Include="..\PolicyService\DTOs\CreatePolicyRequest.cs" Link="Imported\Policy\CreatePolicyRequest.cs" />
+    <Compile Include="..\PolicyService\DTOs\UpdatePolicyRequest.cs" Link="Imported\Policy\UpdatePolicyRequest.cs" />
+    <Compile Include="..\PolicyService\DTOs\PurchasePolicyRequest.cs" Link="Imported\Policy\PurchasePolicyRequest.cs" />
+    <Compile Include="..\PolicyService\DTOs\CustomerPolicyResponse.cs" Link="Imported\Policy\CustomerPolicyResponse.cs" />
+    <Compile Include="..\PolicyService\Models\PolicyModels.cs" Link="Imported\Policy\PolicyModels.cs" />
+    <Compile Include="..\PolicyService\Models\CustomerPolicy.cs" Link="Imported\Policy\CustomerPolicy.cs" />
+    <Compile Include="..\PolicyService\Repositories\IPolicyRepository.cs" Link="Imported\Policy\IPolicyRepository.cs" />
+    <Compile Include="..\PolicyService\Services\IEventPublisher.cs" Link="Imported\Policy\IEventPublisher.cs" />
+    <Compile Include="..\PolicyService\Services\IPolicyWorkflowService.cs" Link="Imported\Policy\IPolicyWorkflowService.cs" />
+    <Compile Include="..\PolicyService\Services\PolicyWorkflowService.cs" Link="Imported\Policy\PolicyWorkflowService.cs" />
+
+    <Compile Include="..\PaymentService\DTOs\CreatePaymentRequest.cs" Link="Imported\Payment\CreatePaymentRequest.cs" />
+    <Compile Include="..\PaymentService\Models\Payment.cs" Link="Imported\Payment\Payment.cs" />
+    <Compile Include="..\PaymentService\Repositories\IPaymentRepository.cs" Link="Imported\Payment\IPaymentRepository.cs" />
+    <Compile Include="..\PaymentService\Services\IEventPublisher.cs" Link="Imported\Payment\IEventPublisher.cs" />
+    <Compile Include="..\PaymentService\Services\IPaymentService.cs" Link="Imported\Payment\IPaymentService.cs" />
+    <Compile Include="..\PaymentService\Services\PaymentServices.cs" Link="Imported\Payment\PaymentServices.cs" />
+
+    <Compile Include="..\AdminService\DTOs\AdminDtos.cs" Link="Imported\Admin\AdminDtos.cs" />
+    <Compile Include="..\AdminService\Models\EventAudit.cs" Link="Imported\Admin\EventAudit.cs" />
+    <Compile Include="..\AdminService\Repositories\IAdminReadRepository.cs" Link="Imported\Admin\IAdminReadRepository.cs" />
+    <Compile Include="..\AdminService\Services\IAdminReportingService.cs" Link="Imported\Admin\IAdminReportingService.cs" />
+    <Compile Include="..\AdminService\Services\AdminReportingService.cs" Link="Imported\Admin\AdminReportingService.cs" />
+  </ItemGroup>
+</Project>
