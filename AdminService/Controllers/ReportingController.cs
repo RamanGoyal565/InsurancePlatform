@@ -28,6 +28,10 @@ public sealed class ReportingController(IAdminReportingService reportingService)
     public async Task<ActionResult> PolicyReports([FromQuery] DateTime? fromUtc, [FromQuery] DateTime? toUtc, CancellationToken cancellationToken)
         => Ok(await reportingService.GetPolicyReportsAsync(fromUtc, toUtc, cancellationToken));
 
+    [HttpGet("reports/policies/{policyId:guid}/customers")]
+    public async Task<ActionResult> PolicyCustomers(Guid policyId, [FromQuery] DateTime? fromUtc, [FromQuery] DateTime? toUtc, CancellationToken cancellationToken)
+        => Ok(await reportingService.GetPolicyCustomersReportAsync(policyId, fromUtc, toUtc, cancellationToken));
+
     [HttpGet("reports/users")]
     public async Task<ActionResult> UserReports([FromQuery] DateTime? fromUtc, [FromQuery] DateTime? toUtc, CancellationToken cancellationToken)
         => Ok(await reportingService.GetUserReportsAsync(fromUtc, toUtc, cancellationToken));

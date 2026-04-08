@@ -50,6 +50,23 @@ public sealed record PolicyReportsResponse(
     DateGroupedCountReport PoliciesByDate,
     double PolicyRenewalRate);
 
+public sealed record PolicyCustomerItem(
+    Guid CustomerId,
+    string? CustomerName,
+    string? CustomerEmail,
+    bool IsActive,
+    DateTime FirstPurchasedAtUtc,
+    int PoliciesBought,
+    int RenewalCount,
+    string LatestStatus);
+
+public sealed record PolicyCustomersReportResponse(
+    Guid PolicyId,
+    string? PolicyName,
+    string? VehicleType,
+    int TotalCustomers,
+    IEnumerable<PolicyCustomerItem> Customers);
+
 public sealed record UsersByRoleReport(int Customers, int ClaimsSpecialists, int SupportSpecialists);
 
 public sealed record UserReportsResponse(

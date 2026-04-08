@@ -3641,16 +3641,21 @@
           }
         },
         "centralPackageVersions": {
+          "coverlet.collector": "6.0.4",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "10.0.5",
+          "Microsoft.AspNetCore.TestHost": "10.0.5",
           "Microsoft.EntityFrameworkCore.Design": "10.0.5",
           "Microsoft.EntityFrameworkCore.SqlServer": "10.0.5",
           "Microsoft.EntityFrameworkCore.Tools": "10.0.5",
+          "Microsoft.NET.Test.Sdk": "17.14.1",
           "Microsoft.OpenApi": "2.3.0",
           "MMLib.SwaggerForOcelot": "10.0.0",
           "Ocelot": "24.1.0",
           "RabbitMQ.Client": "7.2.1",
           "Swashbuckle.AspNetCore": "10.0.1",
-          "Swashbuckle.AspNetCore.SwaggerUI": "10.1.7"
+          "Swashbuckle.AspNetCore.SwaggerUI": "10.1.7",
+          "xunit": "2.9.3",
+          "xunit.runner.visualstudio": "2.8.2"
         },
         "imports": [
           "net461",

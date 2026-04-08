@@ -101,6 +101,44 @@ namespace AdminService.Services
                 Rate(renewals, sold));
         }
 
+        public async Task<PolicyCustomersReportResponse> GetPolicyCustomersReportAsync(Guid policyId, DateTime? fromUtc, DateTime? toUtc, CancellationToken cancellationToken)
+        {
+            var audits = await repository.GetAsync(fromUtc, toUtc, cancellationToken);
+            var users = BuildUserSnapshots(audits).ToDictionary(x => x.UserId, x => x);
+            var policyDefinitions = BuildPolicyDefinitions(audits);
+            var customers = BuildCustomerPolicies(audits)
+                .Where(x => x.PolicyId == policyId)
+                .GroupBy(x => x.CustomerId)
+                .Select(group =>
+                {
+                    users.TryGetValue(group.Key, out var user);
+                    var customerPolicies = group.OrderBy(x => x.PurchasedAtUtc).ToList();
+                    var latest = customerPolicies.Last();
+
+                    return new PolicyCustomerItem(
+                        group.Key,
+                        user?.Name,
+                        user?.Email,
+                        user?.IsActive ?? false,
+                        customerPolicies.First().PurchasedAtUtc,
+                        group.Count(),
+                        group.Sum(x => x.RenewalCount),
+                        latest.Status);
+                })
+                .OrderBy(x => x.CustomerName ?? string.Empty)
+                .ThenBy(x => x.CustomerEmail ?? string.Empty)
+                .ToList();
+
+            policyDefinitions.TryGetValue(policyId, out var policy);
+
+            return new PolicyCustomersReportResponse(
+                policyId,
+                policy?.Name,
+                policy?.VehicleType,
+                customers.Count,
+                customers);
+        }
+
         public async Task<UserReportsResponse> GetUserReportsAsync(DateTime? fromUtc, DateTime? toUtc, CancellationToken cancellationToken)
         {
             var audits = await repository.GetAsync(fromUtc, toUtc, cancellationToken);
@@ -454,3 +492,4 @@ namespace AdminService.Services
         private sealed record TicketSnapshot(Guid TicketId, string Type, string Status, Guid CustomerId, Guid? PolicyId, Guid? AssignedTo, DateTime CreatedAtUtc, DateTime? ResolvedAtUtc, DateTime? FirstResponseAtUtc, string? ApprovalStatus, Guid? ProcessedBy, DateTime? DecidedAtUtc, int CommentCount);
     }
 }
+

@@ -9,6 +9,7 @@ namespace AdminService.Services
         Task<ClaimReportsResponse> GetClaimReportsAsync(DateTime? fromUtc, DateTime? toUtc, CancellationToken cancellationToken);
         Task<RevenueReportsResponse> GetRevenueReportsAsync(DateTime? fromUtc, DateTime? toUtc, CancellationToken cancellationToken);
         Task<PolicyReportsResponse> GetPolicyReportsAsync(DateTime? fromUtc, DateTime? toUtc, CancellationToken cancellationToken);
+        Task<PolicyCustomersReportResponse> GetPolicyCustomersReportAsync(Guid policyId, DateTime? fromUtc, DateTime? toUtc, CancellationToken cancellationToken);
         Task<UserReportsResponse> GetUserReportsAsync(DateTime? fromUtc, DateTime? toUtc, CancellationToken cancellationToken);
         Task<PerformanceReportsResponse> GetPerformanceReportsAsync(DateTime? fromUtc, DateTime? toUtc, CancellationToken cancellationToken);
     }

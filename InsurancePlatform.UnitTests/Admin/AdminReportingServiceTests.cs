@@ -136,6 +136,38 @@ public sealed class AdminReportingServiceTests
     }
 
     [Fact]
+    public async Task GetPolicyCustomersReportAsync_ReturnsCustomersWhoBoughtThePolicy()
+    {
+        var policyId = Guid.NewGuid();
+        var otherPolicyId = Guid.NewGuid();
+        var firstCustomerId = Guid.NewGuid();
+        var secondCustomerId = Guid.NewGuid();
+        var repository = new FakeAdminReadRepository(
+        [
+            Audit("UserRegistered", new { UserId = firstCustomerId, Name = "Satyam", Email = "satyam@test.com", Role = "Customer" }, DaysAgo(12)),
+            Audit("UserRegistered", new { UserId = secondCustomerId, Name = "Priya", Email = "priya@test.com", Role = "Customer" }, DaysAgo(11)),
+            Audit("PolicyCreated", new { PolicyId = policyId, Name = "Car Protect", VehicleType = "Car", Premium = 1200m }, DaysAgo(10)),
+            Audit("PolicyCreated", new { PolicyId = otherPolicyId, Name = "Bike Protect", VehicleType = "Bike", Premium = 900m }, DaysAgo(9)),
+            Audit("PolicyPurchased", new { CustomerPolicyId = Guid.NewGuid(), PolicyId = policyId, CustomerId = firstCustomerId }, DaysAgo(8)),
+            Audit("PolicyRenewed", new { CustomerPolicyId = Guid.NewGuid(), PolicyId = policyId, CustomerId = firstCustomerId }, DaysAgo(5)),
+            Audit("PolicyExpired", new { CustomerPolicyId = Guid.NewGuid(), PolicyId = policyId, CustomerId = firstCustomerId }, DaysAgo(2)),
+            Audit("PolicyPurchased", new { CustomerPolicyId = Guid.NewGuid(), PolicyId = policyId, CustomerId = secondCustomerId }, DaysAgo(6)),
+            Audit("PolicyPurchased", new { CustomerPolicyId = Guid.NewGuid(), PolicyId = otherPolicyId, CustomerId = secondCustomerId }, DaysAgo(4))
+        ]);
+        var sut = new AdminReportingWorkflow(repository);
+
+        var result = await sut.GetPolicyCustomersReportAsync(policyId, null, null, CancellationToken.None);
+
+        Assert.Equal(policyId, result.PolicyId);
+        Assert.Equal("Car Protect", result.PolicyName);
+        Assert.Equal("Car", result.VehicleType);
+        Assert.Equal(2, result.TotalCustomers);
+        Assert.Equal(2, result.Customers.Count());
+        Assert.Contains(result.Customers, x => x.CustomerId == firstCustomerId && x.RenewalCount == 1);
+        Assert.Contains(result.Customers, x => x.CustomerId == secondCustomerId && x.PoliciesBought == 1);
+    }
+
+    [Fact]
     public async Task GetUserReportsAsync_ReturnsRoleAndActivityCounts()
     {
         var customerId = Guid.NewGuid();
@@ -215,7 +247,3 @@ public sealed class AdminReportingServiceTests
         public Task SaveChangesAsync(CancellationToken cancellationToken) => Task.CompletedTask;
     }
 }
-
-
-
-

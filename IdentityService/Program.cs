@@ -36,6 +36,12 @@ builder.Services.AddSwaggerGen(options =>
     };
 
     options.AddSecurityDefinition("Bearer", securityScheme);
+    options.AddSecurityRequirement(doc => new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecuritySchemeReference("Bearer", doc), new List<string>()
+        }
+    });
 });
 
 builder.Services.AddDbContext<IdentityDbContext>(options =>
