@@ -17,6 +17,7 @@ namespace PolicyService.Services
                     var todayUtc = DateTime.UtcNow.Date;
                     var customerPolicies = await repository.GetPoliciesForReminderAsync(todayUtc, stoppingToken);
                     var policiesToExpire = await repository.GetPoliciesToExpireAsync(todayUtc, stoppingToken);
+                    
                     foreach (var expiredPolicy in policiesToExpire)
                     {
                         expiredPolicy.Status = CustomerPolicyStatus.Expired;
@@ -26,6 +27,7 @@ namespace PolicyService.Services
                             await publisher.PublishAsync("PolicyExpired", new { expiredPolicy.CustomerPolicyId, expiredPolicy.PolicyId, expiredPolicy.CustomerId, ExpiredOn = expiredPolicy.EndDate.Date }, stoppingToken);
                         }
                     }
+
                     foreach (var customerPolicy in customerPolicies)
                     {
                         var daysUntilExpiry = (customerPolicy.EndDate.Date - todayUtc).Days;
@@ -55,6 +57,7 @@ namespace PolicyService.Services
                 }
                 catch
                 {
+
                 }
                 await Task.Delay(TimeSpan.FromHours(12), stoppingToken);
             }

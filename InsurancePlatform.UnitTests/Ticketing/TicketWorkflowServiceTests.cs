@@ -79,25 +79,34 @@ public sealed class TicketWorkflowServiceTests
     }
 
     [Fact]
-    public async Task GetAsync_FiltersTicketsByRole()
+    public async Task GetAsync_FiltersTicketsByRoleAndAssignment()
     {
         var customerId = Guid.NewGuid();
+        var claimSpecialistId = Guid.NewGuid();
+        var supportSpecialistId = Guid.NewGuid();
         var repository = new FakeTicketRepository();
-        repository.Tickets.AddRange(
-        [
-            CreateTicket(TicketType.Support, TicketStatus.Open, customerId),
-            CreateTicket(TicketType.Claim, TicketStatus.Open, Guid.NewGuid()),
-            CreateTicket(TicketType.Support, TicketStatus.Open, Guid.NewGuid())
-        ]);
+
+        var customerTicket = CreateTicket(TicketType.Support, TicketStatus.Open, customerId);
+        var assignedClaim = CreateTicket(TicketType.Claim, TicketStatus.Assigned, Guid.NewGuid());
+        assignedClaim.AssignedTo = claimSpecialistId;
+        var unassignedClaim = CreateTicket(TicketType.Claim, TicketStatus.Open, Guid.NewGuid());
+        var assignedSupport = CreateTicket(TicketType.Support, TicketStatus.Assigned, Guid.NewGuid());
+        assignedSupport.AssignedTo = supportSpecialistId;
+        var someoneElsesSupport = CreateTicket(TicketType.Support, TicketStatus.Assigned, Guid.NewGuid());
+        someoneElsesSupport.AssignedTo = Guid.NewGuid();
+
+        repository.Tickets.AddRange([customerTicket, assignedClaim, unassignedClaim, assignedSupport, someoneElsesSupport]);
         var sut = new TicketWorkflow(repository, new FakeTicketEventPublisher(), new FakePolicyValidationService());
 
         var customerTickets = await sut.GetAsync(new CurrentUser(customerId, "Customer"), CancellationToken.None);
-        var claimTickets = await sut.GetAsync(new CurrentUser(Guid.NewGuid(), "ClaimsSpecialist"), CancellationToken.None);
-        var supportTickets = await sut.GetAsync(new CurrentUser(Guid.NewGuid(), "SupportSpecialist"), CancellationToken.None);
+        var claimTickets = await sut.GetAsync(new CurrentUser(claimSpecialistId, "ClaimsSpecialist"), CancellationToken.None);
+        var supportTickets = await sut.GetAsync(new CurrentUser(supportSpecialistId, "SupportSpecialist"), CancellationToken.None);
 
         Assert.Single(customerTickets);
         Assert.Single(claimTickets);
-        Assert.Equal(2, supportTickets.Count);
+        Assert.Equal(assignedClaim.TicketId, claimTickets.Single().TicketId);
+        Assert.Single(supportTickets);
+        Assert.Equal(assignedSupport.TicketId, supportTickets.Single().TicketId);
     }
 
     [Fact]

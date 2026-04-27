@@ -19,6 +19,8 @@ public sealed class AuthController(IIdentityService identityService) : Controlle
 
     [AllowAnonymous]
     [HttpPost("login")]
-    public async Task<ActionResult<AuthResponse>> Login(LoginRequest request, CancellationToken cancellationToken) 
-        => Ok(await identityService.LoginAsync(request, cancellationToken));
+    public async Task<ActionResult<AuthResponse>> Login(LoginRequest request, CancellationToken cancellationToken)
+    {
+        return Ok(await identityService.LoginAsync(request, cancellationToken));
+    }
 }

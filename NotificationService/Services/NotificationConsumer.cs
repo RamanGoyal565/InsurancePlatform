@@ -132,6 +132,7 @@ namespace NotificationService.Services
             "PolicyPurchased" => "Insurance Platform: Policy purchased",
             "PolicyRenewed" => "Insurance Platform: Policy renewed",
             "PolicyExpired" => "Insurance Platform: Policy expired",
+            "PolicyPaymentFailed" => "Insurance Platform: Policy payment failed",
             "PolicyExpiringReminder" => "Insurance Platform: Policy expiry reminder",
             "UserRegistered" => "Welcome to Insurance Platform",
             _ => $"Insurance Platform: {eventType}"
@@ -147,6 +148,7 @@ namespace NotificationService.Services
             "PolicyPurchased" => "A new policy was purchased successfully.",
             "PolicyRenewed" => "A policy was renewed successfully.",
             "PolicyExpired" => "Your policy has expired.",
+            "PolicyPaymentFailed" => $"Policy payment failed: {TryReadString(data, "Reason") ?? "Payment could not be completed."}",
             "PolicyExpiringReminder" => BuildExpiryReminderMessage(data),
             "UserRegistered" => BuildWelcomeMessage(data),
             _ => $"{eventType}: {data}"

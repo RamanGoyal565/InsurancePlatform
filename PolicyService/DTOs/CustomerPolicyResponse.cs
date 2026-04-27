@@ -14,5 +14,7 @@ namespace PolicyService.DTOs
         string DrivingLicenseNumber,
         CustomerPolicyStatus Status,
         DateTime StartDate,
-        DateTime EndDate);
+        DateTime EndDate,
+        string? LastPaymentFailureReason,
+        DateTime? LastPaymentFailedOnUtc);
 }

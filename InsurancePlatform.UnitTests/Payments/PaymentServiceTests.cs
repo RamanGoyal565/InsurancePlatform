@@ -76,6 +76,19 @@ public sealed class PaymentServiceTests
     }
 
     [Fact]
+    public async Task ProcessPolicyPaymentAsync_PublishesPaymentFailedWhenReferenceRequestsFailure()
+    {
+        var repository = new FakePaymentRepository();
+        var publisher = new FakePaymentEventPublisher();
+        var sut = new PaymentWorkflow(repository, publisher);
+
+        var payment = await sut.ProcessPolicyPaymentAsync(new PolicyPaymentRequest(Guid.NewGuid(), Guid.NewGuid(), Guid.NewGuid(), 1500, "FAIL-REF", "Renewal"), CancellationToken.None);
+
+        Assert.Equal(PaymentStatus.Failed, payment.Status);
+        Assert.Equal("PaymentFailed", publisher.Published.Single().EventType);
+    }
+
+    [Fact]
     public async Task GetAsync_ReturnsRepositoryResults()
     {
         var repository = new FakePaymentRepository();
