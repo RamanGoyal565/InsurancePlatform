@@ -1,0 +1,575 @@
+================================================================
+INSURANCE PLATFORM — CUSTOMER HELP GUIDE
+================================================================
+This guide answers common questions customers have about using
+Insurance Platform. It is written in plain language to help
+you get the most out of your insurance experience.
+================================================================
+
+
+----------------------------------------------------------------
+SECTION 1: WHAT IS INSURANCE PLATFORM?
+----------------------------------------------------------------
+
+Insurance Platform is an online service where you can buy,
+manage, and renew vehicle insurance — all from your phone or
+computer, without visiting any office.
+
+We cover three types of vehicles:
+- Cars
+- Trucks
+- Bikes
+
+What you can do on the platform:
+- Browse and compare insurance plans
+- Buy a policy and get covered instantly
+- View and download your policy document
+- Renew your policy when it is about to expire
+- File a claim if something happens to your vehicle
+- Raise a support request if you need help
+- Track your payments
+- Get instant answers from our AI assistant
+
+
+----------------------------------------------------------------
+SECTION 2: CREATING AN ACCOUNT
+----------------------------------------------------------------
+
+SIGNING UP
+To create an account, go to the Sign Up page and enter:
+- Your full name
+- Your email address
+- A password (at least 8 characters)
+
+After signing up, we will send a 6-digit verification code
+to your email. Enter this code to activate your account.
+The code is valid for 10 minutes.
+
+LOGGING IN
+Go to the Login page and enter your email and password.
+If your details are wrong, you will see an error message
+right away — the page will not refresh or clear your input.
+
+FORGOT YOUR PASSWORD?
+1. Click "Forgot password?" on the Login page.
+2. Enter your email address.
+3. We will send a 6-digit code to your email.
+4. Enter the code when prompted.
+5. Choose a new password (at least 8 characters).
+6. Log in with your new password.
+
+The code expires in 10 minutes. If you did not receive it,
+wait 60 seconds and click "Resend OTP".
+
+KEEPING YOUR ACCOUNT SAFE
+- Use a strong password that you do not use elsewhere.
+- Your session will automatically end after 2 hours.
+- We will never ask for your password by email or phone.
+- If you think someone else accessed your account, raise
+  a support ticket immediately.
+
+
+----------------------------------------------------------------
+SECTION 3: INSURANCE PLANS
+----------------------------------------------------------------
+
+TYPES OF PLANS AVAILABLE
+
+Car Insurance
+Covers your car against accidents, damage, and third-party
+incidents. Plans include:
+- Comprehensive Car Insurance — ₹6,999/year
+  Covers: Own Damage, Third Party Liability, Passenger Cover,
+  Roadside Assistance
+- Zero Depreciation Car Cover — ₹9,499/year
+  Covers: Zero Depreciation, Own Damage, Third Party Liability,
+  Engine Protection, Roadside Assistance
+
+Truck Insurance
+Covers commercial trucks and heavy vehicles. Plans include:
+- Commercial Truck Policy — ₹14,999/year
+  Covers: Own Damage, Third Party Liability, Driver Cover,
+  Goods in Transit, Roadside Assistance
+- Heavy Vehicle Comprehensive — ₹19,999/year
+  Covers: Own Damage, Third Party Liability, Driver Cover,
+  Passenger Cover, Goods in Transit, Roadside Assistance
+
+Bike Insurance
+Covers motorcycles and scooters. Plans include:
+- Bike Insurance — ₹2,299/year
+  Covers: Own Damage, Third Party Liability, Personal Accident,
+  Roadside Assistance
+- Bike Premium Cover — ₹3,999/year
+  Covers: Zero Depreciation, Own Damage, Third Party Liability,
+  Personal Accident, Engine Protection, Roadside Assistance
+
+HOW LONG DOES A POLICY LAST?
+Every policy covers you for exactly one year from the date
+you purchase it.
+
+POLICY DOCUMENT
+Each plan comes with a PDF document that explains your coverage
+in detail. You can view and download it before or after buying.
+
+
+----------------------------------------------------------------
+SECTION 4: BUYING A POLICY
+----------------------------------------------------------------
+
+HOW TO BUY
+1. Go to "Browse Policies" from the menu.
+2. Find the plan you want and click "Buy Policy".
+3. Enter your vehicle registration number
+   (example: DL01AB1234).
+4. Enter your driving licence number
+   (example: DL1420150001234).
+5. Check the summary — it shows the plan name, your vehicle
+   details, and the total amount.
+6. Click "Pay via Razorpay" to go to the payment page.
+7. Complete your payment.
+8. Your policy is active immediately after payment.
+
+PAYMENT OPTIONS
+We use Razorpay for secure payments. You can pay using:
+- UPI (Google Pay, PhonePe, Paytm, and others)
+- Credit or Debit Card (Visa, Mastercard, RuPay)
+- Net Banking
+- Wallets
+
+ONE VEHICLE, ONE POLICY
+Each vehicle can only have one active policy at a time.
+If you already have an active policy for a vehicle and try
+to buy another one for the same vehicle, you will see an
+error message. You need to wait until the current policy
+expires or is cancelled before buying a new one.
+
+AFTER PAYMENT
+Once your payment goes through:
+- Your policy is active right away.
+- A receipt appears on screen with your payment details.
+- You can download the receipt as a file.
+- Your policy appears in "My Policies".
+
+WHAT IF PAYMENT FAILS?
+If your payment does not go through, no policy is created.
+You can simply try again — go back to "Browse Policies"
+and start the purchase again.
+
+
+----------------------------------------------------------------
+SECTION 5: YOUR POLICIES
+----------------------------------------------------------------
+
+WHERE TO SEE YOUR POLICIES
+Go to "My Policies" from the menu. You will see a list of
+all the policies you have purchased, showing:
+- Policy number
+- Plan name
+- Your vehicle registration number
+- Your driving licence number
+- Vehicle type
+- Current status
+- Expiry date
+- Action button (Renew or Buy Again)
+
+POLICY STATUS EXPLAINED
+- Active: Your policy is valid and you are covered.
+- Renewed: Your policy was renewed and is still valid.
+- Pending: Your payment is being processed. This usually
+  resolves within a few seconds.
+- Expired: Your policy has passed its end date.
+- Cancelled: Your policy was cancelled, usually because
+  a payment did not go through.
+
+DOWNLOADING YOUR POLICY DOCUMENT
+Click the document icon next to any policy in "My Policies"
+to open the PDF viewer. From there, click "Download" to
+save the document to your device.
+
+
+----------------------------------------------------------------
+SECTION 6: RENEWING YOUR POLICY
+----------------------------------------------------------------
+
+WHEN CAN YOU RENEW?
+You can renew your policy starting from 30 days before it
+expires, and up to 15 days after it expires.
+
+For example, if your policy expires on 15 August:
+- You can renew from 15 July onwards.
+- The last day to renew is 30 August.
+
+If you try to renew too early (more than 30 days before
+expiry), you will see a message asking you to wait.
+
+HOW TO RENEW
+1. Go to "My Policies".
+2. Click "Renew" next to the policy you want to renew.
+3. Complete the payment.
+4. Your policy is extended for another year.
+
+WHAT IF MY POLICY HAS ALREADY EXPIRED?
+You still have 15 days after the expiry date to renew.
+After those 15 days, renewal is no longer possible.
+
+In that case, the button will show "Buy Again" instead of
+"Renew". Click it to purchase a fresh policy for the same
+vehicle.
+
+CAN I CANCEL MY POLICY?
+Cancellation through the customer portal is not currently
+available. If you need to cancel, please raise a Support
+Ticket and our team will assist you.
+
+
+----------------------------------------------------------------
+SECTION 7: FILING A CLAIM
+----------------------------------------------------------------
+
+WHAT IS A CLAIM?
+A claim is a request for compensation when something covered
+by your policy happens — for example, an accident, theft,
+or damage to your vehicle.
+
+HOW TO FILE A CLAIM
+1. Go to "Tickets & Claims" from the menu.
+2. Click "Raise New Ticket".
+3. Choose "Claim" as the type.
+4. Select the policy the claim is for (if applicable).
+5. Write a clear title for your claim.
+6. Describe what happened in detail.
+7. Enter the amount you are claiming.
+8. Attach a supporting document (PDF, max 1 MB) — optional
+   but recommended.
+9. Click "Submit Ticket".
+
+WHAT TO INCLUDE IN YOUR DESCRIPTION
+The more detail you provide, the faster your claim can be
+reviewed. Include:
+- When and where the incident happened
+- What happened (accident, theft, damage, etc.)
+- The extent of damage or loss
+- Whether a police report was filed (and the report number)
+- Any other parties involved
+- Your estimated repair or replacement cost
+
+WHAT HAPPENS AFTER YOU SUBMIT?
+1. Your claim is received and assigned to a Claims Specialist.
+2. The specialist reviews your claim and any documents.
+3. You will receive a notification when a decision is made.
+4. The decision is either Approved or Rejected.
+
+Once a decision is made, it is final and cannot be changed.
+
+CLAIM APPROVED
+If your claim is approved, the settlement will be processed.
+You will receive a notification confirming the approval.
+
+CLAIM REJECTED
+If your claim is rejected, you will receive a notification
+explaining the outcome. If you believe the decision was
+incorrect, please raise a new Support Ticket.
+
+CHECKING YOUR CLAIM STATUS
+Go to "Tickets & Claims" and click the eye icon next to
+your claim to see the full details, including the current
+status, specialist comments, and any attached documents.
+
+
+----------------------------------------------------------------
+SECTION 8: SUPPORT TICKETS
+----------------------------------------------------------------
+
+WHAT IS A SUPPORT TICKET?
+A support ticket is how you ask for help with anything that
+is not a claim — for example:
+- Questions about your policy
+- Help with a payment
+- Account issues
+- Technical problems
+- Any other question or concern
+
+HOW TO RAISE A SUPPORT TICKET
+1. Go to "Tickets & Claims" from the menu.
+2. Click "Raise New Ticket".
+3. Choose "Support" as the type.
+4. Select a related policy if relevant.
+5. Write a clear title.
+6. Describe your issue in detail.
+7. Attach a document (PDF, max 1 MB) if it helps explain
+   your issue — optional.
+8. Click "Submit Ticket".
+
+WHAT HAPPENS NEXT?
+Your ticket is reviewed by our team and assigned to a
+Support Specialist. You will receive a notification when
+someone is assigned and when they respond.
+
+ADDING MORE INFORMATION
+After submitting a ticket, you can add comments to provide
+more details or respond to the specialist. You can also
+attach one PDF document per comment.
+
+TICKET STATUS EXPLAINED
+- Open: Your ticket has been received.
+- Assigned: A specialist has been assigned to help you.
+- In Review: The specialist is looking into your issue.
+- Resolved: Your issue has been resolved.
+- Closed: The ticket has been closed.
+
+VIEWING TICKET DETAILS
+Click the eye icon next to any ticket to see the full
+conversation, status, and any attached documents.
+
+
+----------------------------------------------------------------
+SECTION 9: PAYMENTS
+----------------------------------------------------------------
+
+VIEWING YOUR PAYMENT HISTORY
+Go to "Payments" from the menu to see all your transactions,
+including the amount, date, and whether the payment was
+successful.
+
+WHAT IF A PAYMENT FAILS?
+If a payment fails, no policy is created or renewed.
+You will receive a notification. Simply try again by
+going back to "Browse Policies" or "My Policies".
+
+PAYMENT RECEIPT
+After every successful payment, a receipt is shown on screen.
+You can download it as a file. Keep this receipt as proof
+of payment — it includes a unique payment reference number.
+
+YOUR PAYMENT INFORMATION IS SAFE
+We do not store your card or bank details. All payments
+are handled securely by Razorpay. We only keep a record
+of the payment amount and reference number.
+
+
+----------------------------------------------------------------
+SECTION 10: NOTIFICATIONS
+----------------------------------------------------------------
+
+WHAT NOTIFICATIONS WILL I RECEIVE?
+You will receive notifications for important events:
+
+About your account:
+- Welcome message when you register
+- Confirmation when your email is verified
+
+About your policies:
+- Policy purchased successfully
+- Policy renewed successfully
+- Policy has expired
+- Reminder 30 days before your policy expires
+- Urgent reminder 7 days before your policy expires
+- Payment failed for a policy
+
+About your tickets and claims:
+- Ticket submitted successfully
+- Ticket assigned to a specialist
+- Ticket status updated
+- New comment added to your ticket
+- Claim approved
+- Claim rejected
+
+About payments:
+- Payment received successfully
+- Payment failed
+
+WHERE TO SEE NOTIFICATIONS
+Go to "Notifications" from the menu. Unread notifications
+are highlighted. Click "Mark all as read" to clear them all.
+
+EMAIL NOTIFICATIONS
+Important notifications are also sent to your email address.
+The email includes a button to log in directly.
+
+NOTIFICATION BELL
+The bell icon in the top bar shows how many unread
+notifications you have. Click it to go to the Notifications
+page.
+
+
+----------------------------------------------------------------
+SECTION 11: UPLOADING DOCUMENTS
+----------------------------------------------------------------
+
+WHAT FILE TYPES ARE ACCEPTED?
+Only PDF files can be uploaded.
+
+MAXIMUM FILE SIZE
+1 MB per file.
+
+WHERE CAN I UPLOAD DOCUMENTS?
+- When filing a claim or support ticket (one PDF per ticket)
+- When adding a comment to a ticket (one PDF per comment)
+
+HOW TO UPLOAD
+Click the upload area or drag and drop your PDF file.
+If the file is too large or is not a PDF, you will see
+an error message right away.
+
+VIEWING DOCUMENTS
+Click the PDF icon next to any document to open it in
+the viewer. You can also download it from the viewer.
+
+
+----------------------------------------------------------------
+SECTION 12: FREQUENTLY ASKED QUESTIONS
+----------------------------------------------------------------
+
+Q: How do I know if my policy is active?
+A: Go to "My Policies". If the status shows "Active" or
+   "Renewed", you are covered.
+
+Q: Can I have two policies for the same vehicle?
+A: No. Each vehicle can only have one active policy at a time.
+
+Q: What should I do if my payment failed?
+A: Simply try again. Go to "Browse Policies" to buy a new
+   policy, or go to "My Policies" and click "Renew" to
+   retry a renewal.
+
+Q: How long does it take to process a claim?
+A: Processing time depends on the complexity of your claim.
+   You will receive notifications at every step so you
+   always know what is happening.
+
+Q: Can I cancel my policy?
+A: Cancellation through the portal is not currently available.
+   Please raise a Support Ticket and our team will help you.
+
+Q: What happens if I miss the renewal window?
+A: If more than 15 days have passed since your policy expired,
+   you cannot renew it. Use the "Buy Again" button to purchase
+   a new policy for your vehicle.
+
+Q: Can I change my vehicle details after buying a policy?
+A: Vehicle details cannot be changed after purchase. Please
+   raise a Support Ticket if you need assistance.
+
+Q: Is my payment information stored?
+A: No. Your card or bank details are never stored on our
+   platform. All payments are handled by Razorpay.
+
+Q: How do I download my policy document?
+A: Go to "My Policies" and click the document icon next to
+   the policy. Click "Download" in the viewer.
+
+Q: What is the difference between a Support Ticket and a Claim?
+A: A Support Ticket is for general help and questions.
+   A Claim is a formal request for insurance compensation
+   after an incident like an accident or theft.
+
+Q: Can I attach multiple documents to a claim?
+A: You can attach one PDF when filing the ticket, and one
+   more PDF with each comment you add afterwards.
+
+Q: How do I contact a support agent?
+A: Raise a Support Ticket from "Tickets & Claims". A
+   specialist will be assigned and will respond through
+   the comments.
+
+Q: What vehicles are covered?
+A: Cars, Trucks, and Bikes (motorcycles and scooters).
+
+Q: How do I verify my email?
+A: After registering, enter the 6-digit code sent to your
+   email. If you did not receive it, click "Resend OTP"
+   after 60 seconds.
+
+Q: What should I include in a claim?
+A: Date, time, and location of the incident; what happened;
+   extent of damage; police report number if applicable;
+   and your estimated cost.
+
+Q: How will I know when my claim is decided?
+A: You will receive a notification in the app and by email.
+
+Q: Can I reopen a rejected claim?
+A: No. Once a claim is decided, it is final. If you believe
+   it was incorrect, raise a new Support Ticket.
+
+Q: How do I change my password?
+A: Use "Forgot Password" on the Login page. Enter your email,
+   receive a code, verify it, and set a new password.
+
+Q: What payment methods are accepted?
+A: UPI (Google Pay, PhonePe, Paytm), Credit Cards, Debit
+   Cards, Net Banking, and Wallets — all through Razorpay.
+
+Q: How do I know if the AI assistant is working?
+A: The chat button in the bottom-right corner shows a green
+   dot when the assistant is online and a red dot when it
+   is not available.
+
+Q: When can I renew my policy?
+A: You can renew starting from 30 days before your policy
+   expires, and up to 15 days after it expires.
+
+Q: What happens if I try to renew too early?
+A: You will see a message letting you know the renewal window
+   has not opened yet. Come back closer to your expiry date.
+
+Q: My policy shows "Pending" — what does that mean?
+A: Your payment is being processed. This usually resolves
+   within a few seconds. Refresh the page and it should
+   update to "Active".
+
+Q: I bought a policy but it is not showing in My Policies.
+A: Wait a few seconds and refresh the page. If it still does
+   not appear, raise a Support Ticket with your payment
+   reference number.
+
+
+----------------------------------------------------------------
+SECTION 13: NAVIGATING THE PLATFORM
+----------------------------------------------------------------
+
+YOUR MENU OPTIONS
+- Dashboard: Your home page. See a summary of your policies,
+  payments, open tickets, and notifications at a glance.
+  Quick action buttons let you jump to common tasks.
+- Browse Policies: See all available insurance plans.
+  Compare coverage and prices, view policy documents,
+  and buy a policy.
+- My Policies: See all your purchased policies. Renew
+  policies, download documents, and check status.
+- Tickets & Claims: Raise support requests and insurance
+  claims. Track progress and communicate with specialists.
+- Payments: See your full payment history.
+- Notifications: See all your notifications.
+
+DASHBOARD QUICK ACTIONS
+From your dashboard, you can quickly:
+- Browse available insurance plans
+- Raise a support ticket
+- File a claim
+- Go to payments
+
+TOP BAR
+- The bell icon shows your unread notification count.
+- Click your avatar (initials) to log out.
+
+
+----------------------------------------------------------------
+SECTION 14: GETTING MORE HELP
+----------------------------------------------------------------
+
+If you cannot find the answer here or through the AI
+assistant, raise a Support Ticket. Our team is here to help.
+
+When raising a ticket, please include:
+- A clear description of your issue
+- Your policy number (if relevant)
+- Any documents that help explain the situation (PDF, max 1 MB)
+- Steps you have already tried
+
+You will receive a notification when a specialist responds.
+
+================================================================
+END OF CUSTOMER HELP GUIDE
+Version 1.1 — April 2026
+================================================================

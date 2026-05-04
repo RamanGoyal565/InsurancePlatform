@@ -12,7 +12,9 @@
     <PackageVersion Include="Microsoft.OpenApi" Version="2.3.0" />
     <PackageVersion Include="MMLib.SwaggerForOcelot" Version="10.0.0" />
     <PackageVersion Include="Ocelot" Version="24.1.0" />
+    <PackageVersion Include="QuestPDF" Version="2025.4.0" />
     <PackageVersion Include="RabbitMQ.Client" Version="7.2.1" />
+    <PackageVersion Include="Razorpay" Version="3.0.1" />
     <PackageVersion Include="Swashbuckle.AspNetCore" Version="10.0.1" />
     <PackageVersion Include="Swashbuckle.AspNetCore.SwaggerUI" Version="10.1.7" />
     <PackageVersion Include="coverlet.collector" Version="6.0.4" />

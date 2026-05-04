@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <!-- Navy background circle -->
+  <circle cx="24" cy="24" r="24" fill="#002045"/>
+  <!-- White shield (Material Security icon path, centered) -->
+  <path d="M24 7 L11 12.5 V22 C11 30.8 16.7 39.1 24 41.2 C31.3 39.1 37 30.8 37 22 V12.5 Z" fill="#ffffff"/>
+  <!-- Checkmark inside shield -->
+  <path d="M19.5 24.5 L22.5 27.5 L28.5 21" stroke="#002045" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
