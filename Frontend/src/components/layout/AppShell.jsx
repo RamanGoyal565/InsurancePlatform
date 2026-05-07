@@ -3,9 +3,9 @@ import { Outlet } from 'react-router-dom';
 import { Box } from '@mui/material';
 import Sidebar from './Sidebar';
 import TopBar from './TopBar';
-import ChatbotWidget from '../ui/ChatbotWidget';
+//import ChatbotWidget from '../ui/ChatbotWidget';
 import { useAuth } from '../../app/AuthContext';
-import { ROLES } from '../../app/roles';
+//import { ROLES } from '../../app/roles';
 
 const DRAWER_WIDTH = 240;
 
@@ -37,7 +37,7 @@ export default function AppShell() {
       </Box>
 
       {/* AI Chatbot — visible to customers only */}
-      {user?.role === ROLES.CUSTOMER && <ChatbotWidget />}
+      {/*{user?.role === ROLES.CUSTOMER && <ChatbotWidget />}*/}
     </Box>
   );
 }

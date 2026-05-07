@@ -123,7 +123,7 @@ export default function LandingPage() {
             { label: 'Home', path: '/' },
             { label: 'Policies', path: '/policies' },
             { label: 'Claims', path: '/login' },
-            { label: 'About Us', path: '/' },
+            //{ label: 'About Us', path: '/' },
           ].map((item) => (
             <Typography
               key={item.label}

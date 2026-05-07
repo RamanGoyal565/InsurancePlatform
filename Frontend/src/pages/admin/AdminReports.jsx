@@ -1,8 +1,7 @@
 import {
-  Box, Card, CardContent, Typography, Button, Alert,
+  Box, Card, CardContent, Typography, Alert,
   Table, TableHead, TableRow, TableCell, TableBody,
 } from '@mui/material';
-import DownloadIcon from '@mui/icons-material/Download';
 import {
   useRevenueReports, usePerformanceReports, useUserReports,
   useTicketReports, usePolicyReports, useClaimReports,
@@ -73,12 +72,9 @@ export default function AdminReports() {
   return (
     <Box sx={{ width: '100%' }}>
       {/* Header */}
-      <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 3 }}>
-        <Box>
-          <Typography variant="h5" fontWeight={700}>Reports</Typography>
-          <Typography variant="body2" color="text.secondary">Platform analytics and performance metrics</Typography>
-        </Box>
-        <Button variant="outlined" startIcon={<DownloadIcon />}>Export</Button>
+      <Box sx={{ mb: 3 }}>
+        <Typography variant="h5" fontWeight={700}>Reports</Typography>
+        <Typography variant="body2" color="text.secondary">Platform analytics and performance metrics</Typography>
       </Box>
 
       {/* ── 1. Revenue Trends — full width ── */}

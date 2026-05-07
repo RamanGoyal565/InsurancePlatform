@@ -23,6 +23,21 @@ import Base64PdfViewer from '../../components/ui/Base64PdfViewer';
 const TICKET_STATUS = ['', 'Open', 'InReview', 'Assigned', 'Resolved', 'Rejected', 'Closed'];
 const TICKET_TYPE = ['', 'Support', 'Claim'];
 
+/**
+ * Valid forward transitions per current status.
+ * Status values: Open=1, InReview=2, Assigned=3, Resolved=4, Rejected=5, Closed=6
+ *
+ * Flow: Open → Assigned → InReview → Resolved | Rejected → Closed
+ */
+const NEXT_STATUSES = {
+  1: [3],          // Open → Assigned
+  3: [2],          // Assigned → InReview
+  2: [4, 5],       // InReview → Resolved or Rejected
+  4: [6],          // Resolved → Closed
+  5: [6],          // Rejected → Closed
+  6: [],           // Closed — terminal
+};
+
 export default function TicketDetail() {
   const { ticketId } = useParams();
   const navigate = useNavigate();
@@ -113,17 +128,21 @@ export default function TicketDetail() {
         </Typography>
         <StatusChip status={TICKET_STATUS[ticket.status] || String(ticket.status)} />
         <Box sx={{ flexGrow: 1 }} />
-        <TextField
-          select size="small" label="Change Status"
-          value={ticket.status}
-          onChange={(e) => updateStatus.mutate({ ticketId, status: Number(e.target.value) })}
-          sx={{ width: 160 }}
-          disabled={isTerminal}
-        >
-          {TICKET_STATUS.filter(Boolean).map((s, i) => (
-            <MenuItem key={s} value={i + 1}>{s}</MenuItem>
-          ))}
-        </TextField>
+        {/* Only show status dropdown when there are valid next steps */}
+        {!isTerminal && (NEXT_STATUSES[ticket.status] ?? []).length > 0 && (
+          <TextField
+            select size="small" label="Move to"
+            value=""
+            onChange={(e) => updateStatus.mutate({ ticketId, status: Number(e.target.value) })}
+            sx={{ width: 160 }}
+          >
+            {(NEXT_STATUSES[ticket.status] ?? []).map((statusVal) => (
+              <MenuItem key={statusVal} value={statusVal}>
+                {TICKET_STATUS[statusVal]}
+              </MenuItem>
+            ))}
+          </TextField>
+        )}
       </Box>
 
       <Grid container spacing={3}>

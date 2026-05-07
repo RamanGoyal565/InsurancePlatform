@@ -1,6 +1,6 @@
 import {
-  Box, Button, Card, CardContent, Chip, Divider, List, ListItem,
-  ListItemText, Switch, Tab, Tabs, Typography,
+  Box, Button, Card, CardContent, Divider, List, ListItem,
+  ListItemText, Typography,
 } from '@mui/material';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { useNotifications, useMarkNotificationRead } from '../../hooks/useNotifications';
@@ -10,7 +10,6 @@ export default function CustomerNotifications() {
   const markRead = useMarkNotificationRead();
 
   const unread = notifications.filter((n) => !n.isRead);
-  const read = notifications.filter((n) => n.isRead);
 
   const markAllRead = () => {
     unread.forEach((n) => markRead.mutate({ notificationId: n.notificationId, isRead: true }));
@@ -24,10 +23,6 @@ export default function CustomerNotifications() {
           <Typography variant="body2" color="text.secondary">Stay updated with your policy and account activity</Typography>
         </Box>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-            <Typography variant="body2">Unread only</Typography>
-            <Switch size="small" />
-          </Box>
           <Button size="small" onClick={markAllRead} disabled={unread.length === 0}>
             Mark all as read
           </Button>

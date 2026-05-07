@@ -1,8 +1,7 @@
 import {
-  Box, Button, Card, CardContent, Chip, Table, TableBody,
+  Box, Card, CardContent, Chip, Table, TableBody,
   TableCell, TableHead, TableRow, Typography,
 } from '@mui/material';
-import DownloadIcon from '@mui/icons-material/Download';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import CancelIcon from '@mui/icons-material/Cancel';
 import PendingIcon from '@mui/icons-material/Pending';
@@ -28,7 +27,6 @@ export default function CustomerPayments() {
           <Typography variant="h5" fontWeight={700}>Payments</Typography>
           <Typography variant="body2" color="text.secondary">Track and manage all payment transactions</Typography>
         </Box>
-        <Button variant="outlined" startIcon={<DownloadIcon />}>Export</Button>
       </Box>
 
       {/* Overview — 4 equal cards, full width */}
