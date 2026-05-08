@@ -28,7 +28,8 @@ public sealed class PolicyWorkflowServiceTests
 
         Assert.Single(repository.Policies);
         Assert.Equal("PolicyCreated", publisher.Published.Single().EventType);
-        Assert.Contains("Vehicle Category: Car", policy.PolicyDocument);
+        var documentText = System.Text.Encoding.UTF8.GetString(Convert.FromBase64String(policy.PolicyDocument));
+        Assert.Contains("Vehicle Type: Car", documentText);
     }
 
     [Fact]

@@ -110,6 +110,10 @@ public sealed class PaymentServiceTests
             return Task.CompletedTask;
         }
         public Task<List<Payment>> GetAsync(CancellationToken cancellationToken) => Task.FromResult(Payments.ToList());
+        public Task<List<Payment>> GetByCustomerIdAsync(Guid customerId, CancellationToken cancellationToken)
+            => Task.FromResult(Payments.Where(payment => payment.CustomerId == customerId).ToList());
+        public Task<bool> ExistsByReferenceAsync(string paymentReference, CancellationToken cancellationToken)
+            => Task.FromResult(Payments.Any(payment => string.Equals(payment.PaymentReference, paymentReference, StringComparison.OrdinalIgnoreCase)));
         public Task SaveChangesAsync(CancellationToken cancellationToken) => Task.CompletedTask;
     }
 

@@ -18,7 +18,11 @@ public sealed class IdentityControllerIntegrationTests
     public async Task Register_AllowsAnonymousRequest_AndReturnsPayload()
     {
         var fake = new FakeIdentityService();
-        var app = await CreateAppAsync(services => services.AddSingleton<IIdentityService>(fake));
+        var app = await CreateAppAsync(services =>
+        {
+            services.AddSingleton<IIdentityService>(fake);
+            services.AddSingleton<IOtpService>(new FakeOtpService());
+        });
         var client = app.GetTestClient();
 
         var response = await client.PostAsJsonAsync("/auth/register", new RegisterRequest
@@ -35,7 +39,11 @@ public sealed class IdentityControllerIntegrationTests
     [Fact]
     public async Task AdminUsers_RequiresAdminRole()
     {
-        var app = await CreateAppAsync(services => services.AddSingleton<IIdentityService>(new FakeIdentityService()));
+        var app = await CreateAppAsync(services =>
+        {
+            services.AddSingleton<IIdentityService>(new FakeIdentityService());
+            services.AddSingleton<IOtpService>(new FakeOtpService());
+        });
         var client = app.GetTestClient();
         client.DefaultRequestHeaders.Add("X-Test-UserId", Guid.NewGuid().ToString());
         client.DefaultRequestHeaders.Add("X-Test-Role", "Customer");
@@ -49,7 +57,11 @@ public sealed class IdentityControllerIntegrationTests
     public async Task AdminUsers_WithAdminRole_ReturnsUsers()
     {
         var fake = new FakeIdentityService();
-        var app = await CreateAppAsync(services => services.AddSingleton<IIdentityService>(fake));
+        var app = await CreateAppAsync(services =>
+        {
+            services.AddSingleton<IIdentityService>(fake);
+            services.AddSingleton<IOtpService>(new FakeOtpService());
+        });
         var client = app.GetTestClient();
         client.DefaultRequestHeaders.Add("X-Test-UserId", Guid.NewGuid().ToString());
         client.DefaultRequestHeaders.Add("X-Test-Role", nameof(UserRole.Admin));
@@ -96,6 +108,21 @@ public sealed class IdentityControllerIntegrationTests
 
         public Task<UserResponse> UpdateUserStatusAsync(Guid userId, bool isActive, CancellationToken cancellationToken)
             => Task.FromResult(new UserResponse(userId, "User", "user@test.com", "Customer", isActive, DateTime.UtcNow));
+
+        public Task<UserResponse?> GetByIdAsync(Guid userId, CancellationToken cancellationToken)
+            => Task.FromResult<UserResponse?>(new UserResponse(userId, "User", "user@test.com", "Customer", true, DateTime.UtcNow));
+    }
+
+    private sealed class FakeOtpService : IOtpService
+    {
+        public Task<OtpResponse> RequestOtpAsync(RequestOtpRequest request, CancellationToken cancellationToken)
+            => Task.FromResult(new OtpResponse(true, "OTP requested"));
+
+        public Task<OtpResponse> VerifyOtpAsync(VerifyOtpRequest request, CancellationToken cancellationToken)
+            => Task.FromResult(new OtpResponse(true, "OTP verified"));
+
+        public Task<OtpResponse> ResetPasswordAsync(ResetPasswordRequest request, CancellationToken cancellationToken)
+            => Task.FromResult(new OtpResponse(true, "Password reset"));
     }
 }
 

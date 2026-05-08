@@ -24,39 +24,41 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="..\IdentityService\DTOs\RegisterRequest.cs" Link="Imported\Identity\RegisterRequest.cs" />
-    <Compile Include="..\IdentityService\DTOs\LoginRequest.cs" Link="Imported\Identity\LoginRequest.cs" />
-    <Compile Include="..\IdentityService\DTOs\CreateUserRequest.cs" Link="Imported\Identity\CreateUserRequest.cs" />
-    <Compile Include="..\IdentityService\DTOs\UpdateUserStatusRequest.cs" Link="Imported\Identity\UpdateUserStatusRequest.cs" />
-    <Compile Include="..\IdentityService\Models\User.cs" Link="Imported\Identity\User.cs" />
-    <Compile Include="..\IdentityService\Services\IIdentityService.cs" Link="Imported\Identity\IIdentityService.cs" />
-    <Compile Include="..\IdentityService\Controllers\AuthController.cs" Link="Imported\Identity\AuthController.cs" />
-    <Compile Include="..\IdentityService\Controllers\AdminController.cs" Link="Imported\Identity\AdminController.cs" />
+    <Compile Include="..\..\Backend\IdentityService\DTOs\RegisterRequest.cs" Link="Imported\Identity\RegisterRequest.cs" />
+    <Compile Include="..\..\Backend\IdentityService\DTOs\LoginRequest.cs" Link="Imported\Identity\LoginRequest.cs" />
+    <Compile Include="..\..\Backend\IdentityService\DTOs\CreateUserRequest.cs" Link="Imported\Identity\CreateUserRequest.cs" />
+    <Compile Include="..\..\Backend\IdentityService\DTOs\OtpDtos.cs" Link="Imported\Identity\OtpDtos.cs" />
+    <Compile Include="..\..\Backend\IdentityService\DTOs\UpdateUserStatusRequest.cs" Link="Imported\Identity\UpdateUserStatusRequest.cs" />
+    <Compile Include="..\..\Backend\IdentityService\Models\User.cs" Link="Imported\Identity\User.cs" />
+    <Compile Include="..\..\Backend\IdentityService\Services\IIdentityService.cs" Link="Imported\Identity\IIdentityService.cs" />
+    <Compile Include="..\..\Backend\IdentityService\Services\IOtpService.cs" Link="Imported\Identity\IOtpService.cs" />
+    <Compile Include="..\..\Backend\IdentityService\Controllers\AuthController.cs" Link="Imported\Identity\AuthController.cs" />
+    <Compile Include="..\..\Backend\IdentityService\Controllers\AdminController.cs" Link="Imported\Identity\AdminController.cs" />
 
-    <Compile Include="..\PolicyService\DTOs\CreatePolicyRequest.cs" Link="Imported\Policy\CreatePolicyRequest.cs" />
-    <Compile Include="..\PolicyService\DTOs\UpdatePolicyRequest.cs" Link="Imported\Policy\UpdatePolicyRequest.cs" />
-    <Compile Include="..\PolicyService\DTOs\PurchasePolicyRequest.cs" Link="Imported\Policy\PurchasePolicyRequest.cs" />
-    <Compile Include="..\PolicyService\DTOs\CustomerPolicyResponse.cs" Link="Imported\Policy\CustomerPolicyResponse.cs" />
-    <Compile Include="..\PolicyService\Models\PolicyModels.cs" Link="Imported\Policy\PolicyModels.cs" />
-    <Compile Include="..\PolicyService\Models\CustomerPolicy.cs" Link="Imported\Policy\CustomerPolicy.cs" />
-    <Compile Include="..\PolicyService\Services\IPolicyWorkflowService.cs" Link="Imported\Policy\IPolicyWorkflowService.cs" />
-    <Compile Include="..\PolicyService\Services\ClaimsPrincipalExtensions.cs" Link="Imported\Policy\ClaimsPrincipalExtensions.cs" />
-    <Compile Include="..\PolicyService\Controllers\PolicyController.cs" Link="Imported\Policy\PolicyController.cs" />
+    <Compile Include="..\..\Backend\PolicyService\DTOs\CreatePolicyRequest.cs" Link="Imported\Policy\CreatePolicyRequest.cs" />
+    <Compile Include="..\..\Backend\PolicyService\DTOs\UpdatePolicyRequest.cs" Link="Imported\Policy\UpdatePolicyRequest.cs" />
+    <Compile Include="..\..\Backend\PolicyService\DTOs\PurchasePolicyRequest.cs" Link="Imported\Policy\PurchasePolicyRequest.cs" />
+    <Compile Include="..\..\Backend\PolicyService\DTOs\CustomerPolicyResponse.cs" Link="Imported\Policy\CustomerPolicyResponse.cs" />
+    <Compile Include="..\..\Backend\PolicyService\Models\PolicyModels.cs" Link="Imported\Policy\PolicyModels.cs" />
+    <Compile Include="..\..\Backend\PolicyService\Models\CustomerPolicy.cs" Link="Imported\Policy\CustomerPolicy.cs" />
+    <Compile Include="..\..\Backend\PolicyService\Services\IPolicyWorkflowService.cs" Link="Imported\Policy\IPolicyWorkflowService.cs" />
+    <Compile Include="..\..\Backend\PolicyService\Services\ClaimsPrincipalExtensions.cs" Link="Imported\Policy\ClaimsPrincipalExtensions.cs" />
+    <Compile Include="..\..\Backend\PolicyService\Controllers\PolicyController.cs" Link="Imported\Policy\PolicyController.cs" />
 
-    <Compile Include="..\TicketService\DTOs\CreateTicketRequest.cs" Link="Imported\Ticket\CreateTicketRequest.cs" />
-    <Compile Include="..\TicketService\DTOs\UpdateTicketStatusRequest.cs" Link="Imported\Ticket\UpdateTicketStatusRequest.cs" />
-    <Compile Include="..\TicketService\DTOs\AssignTicketRequest.cs" Link="Imported\Ticket\AssignTicketRequest.cs" />
-    <Compile Include="..\TicketService\DTOs\AddCommentRequest.cs" Link="Imported\Ticket\AddCommentRequest.cs" />
-    <Compile Include="..\TicketService\Models\TicketModels.cs" Link="Imported\Ticket\TicketModels.cs" />
-    <Compile Include="..\TicketService\Models\Comment.cs" Link="Imported\Ticket\Comment.cs" />
-    <Compile Include="..\TicketService\Models\ClaimDetails.cs" Link="Imported\Ticket\ClaimDetails.cs" />
-    <Compile Include="..\TicketService\Services\ITicketWorkflowService.cs" Link="Imported\Ticket\ITicketWorkflowService.cs" />
-    <Compile Include="..\TicketService\Services\ClaimsPrincipalExtensions.cs" Link="Imported\Ticket\ClaimsPrincipalExtensions.cs" />
-    <Compile Include="..\TicketService\Controllers\TicketsController.cs" Link="Imported\Ticket\TicketsController.cs" />
+    <Compile Include="..\..\Backend\TicketService\DTOs\CreateTicketRequest.cs" Link="Imported\Ticket\CreateTicketRequest.cs" />
+    <Compile Include="..\..\Backend\TicketService\DTOs\UpdateTicketStatusRequest.cs" Link="Imported\Ticket\UpdateTicketStatusRequest.cs" />
+    <Compile Include="..\..\Backend\TicketService\DTOs\AssignTicketRequest.cs" Link="Imported\Ticket\AssignTicketRequest.cs" />
+    <Compile Include="..\..\Backend\TicketService\DTOs\AddCommentRequest.cs" Link="Imported\Ticket\AddCommentRequest.cs" />
+    <Compile Include="..\..\Backend\TicketService\Models\TicketModels.cs" Link="Imported\Ticket\TicketModels.cs" />
+    <Compile Include="..\..\Backend\TicketService\Models\Comment.cs" Link="Imported\Ticket\Comment.cs" />
+    <Compile Include="..\..\Backend\TicketService\Models\ClaimDetails.cs" Link="Imported\Ticket\ClaimDetails.cs" />
+    <Compile Include="..\..\Backend\TicketService\Services\ITicketWorkflowService.cs" Link="Imported\Ticket\ITicketWorkflowService.cs" />
+    <Compile Include="..\..\Backend\TicketService\Services\ClaimsPrincipalExtensions.cs" Link="Imported\Ticket\ClaimsPrincipalExtensions.cs" />
+    <Compile Include="..\..\Backend\TicketService\Controllers\TicketsController.cs" Link="Imported\Ticket\TicketsController.cs" />
 
-    <Compile Include="..\AdminService\DTOs\AdminDtos.cs" Link="Imported\Admin\AdminDtos.cs" />
-    <Compile Include="..\AdminService\Services\IAdminReportingService.cs" Link="Imported\Admin\IAdminReportingService.cs" />
-    <Compile Include="..\AdminService\Controllers\ReportingController.cs" Link="Imported\Admin\ReportingController.cs" />
+    <Compile Include="..\..\Backend\AdminService\DTOs\AdminDtos.cs" Link="Imported\Admin\AdminDtos.cs" />
+    <Compile Include="..\..\Backend\AdminService\Services\IAdminReportingService.cs" Link="Imported\Admin\IAdminReportingService.cs" />
+    <Compile Include="..\..\Backend\AdminService\Controllers\ReportingController.cs" Link="Imported\Admin\ReportingController.cs" />
 
 
   </ItemGroup>

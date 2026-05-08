@@ -316,6 +316,37 @@ paket-files/
 __pycache__/
 *.pyc
 
+# InsurancePlatform repo-specific ignores
+# Ignore EF Core migrations for this repo.
+**/Data/Migrations/
+
+# Frontend build and local environment files
+Frontend/dist/
+Frontend/dist-ssr/
+Frontend/.vite/
+Frontend/.env
+Frontend/.env.local
+Frontend/.env.development.local
+Frontend/.env.test.local
+Frontend/.env.production.local
+!Frontend/.env.example
+
+# Backend configuration files that may contain secrets
+Backend/*/appsettings*.json
+!Backend/*/appsettings.example.json
+!Backend/*/appsettings.template.json
+!Backend/*/appsettings.Template.json
+
+# Local IDE and generated assets inside nested projects
+Frontend/.vs/
+Frontend/src/.vs/
+
+# Common local temp folders
+.tempbuild/
+.tempobj/
+.nuget/
+.dotnet/
+
 # Cake - Uncomment if you are using it
 # tools/**
 # !tools/packages.config

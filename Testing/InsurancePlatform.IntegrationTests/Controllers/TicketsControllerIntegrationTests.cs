@@ -78,6 +78,7 @@ public sealed class TicketsControllerIntegrationTests
             return Task.FromResult(new Ticket { Title = request.Title, Description = request.Description, Type = request.Type, CustomerId = user.UserId });
         }
         public Task<IReadOnlyList<Ticket>> GetAsync(CurrentUser user, CancellationToken cancellationToken) => Task.FromResult<IReadOnlyList<Ticket>>([]);
+        public Task<Ticket?> GetByIdAsync(Guid ticketId, CurrentUser user, CancellationToken cancellationToken) => Task.FromResult<Ticket?>(new Ticket { TicketId = ticketId, Title = "t", Description = "d", Type = TicketType.Support, CustomerId = user.UserId });
         public Task<IReadOnlyList<Comment>> GetCommentsAsync(Guid ticketId, CurrentUser user, CancellationToken cancellationToken) => Task.FromResult<IReadOnlyList<Comment>>([]);
         public Task<Ticket> UpdateStatusAsync(Guid ticketId, UpdateTicketStatusRequest request, CurrentUser user, CancellationToken cancellationToken) => Task.FromResult(new Ticket { TicketId = ticketId, Title = "t", Description = "d", Type = TicketType.Support, CustomerId = user.UserId, Status = request.Status });
         public Task<Ticket> AssignAsync(Guid ticketId, AssignTicketRequest request, CurrentUser user, CancellationToken cancellationToken) => Task.FromResult(new Ticket { TicketId = ticketId, Title = "t", Description = "d", Type = TicketType.Support, CustomerId = user.UserId, AssignedTo = request.AssignedToUserId });
