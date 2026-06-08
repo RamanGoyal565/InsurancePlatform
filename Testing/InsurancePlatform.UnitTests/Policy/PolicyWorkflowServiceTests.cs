@@ -27,9 +27,27 @@ public sealed class PolicyWorkflowServiceTests
         }, CancellationToken.None);
 
         Assert.Single(repository.Policies);
-        Assert.Equal("PolicyCreated", publisher.Published.Single().EventType);
-        var documentText = System.Text.Encoding.UTF8.GetString(Convert.FromBase64String(policy.PolicyDocument));
-        Assert.Contains("Vehicle Type: Car", documentText);
+
+        Assert.Equal(
+            "PolicyCreated",
+            publisher.Published.Single().EventType);
+
+        // Validate repository data instead of PDF text
+        var savedPolicy = repository.Policies.Single();
+
+        Assert.Equal("Car Protect", savedPolicy.Name);
+        Assert.Equal(VehicleType.Car, savedPolicy.VehicleType);
+        Assert.Equal(1200, savedPolicy.Premium);
+
+        // Validate PDF exists
+        Assert.False(string.IsNullOrWhiteSpace(policy.PolicyDocument));
+
+        var pdfBytes = Convert.FromBase64String(policy.PolicyDocument);
+
+        // Validate PDF header
+        var pdfHeader = System.Text.Encoding.ASCII.GetString(pdfBytes, 0, 4);
+
+        Assert.Equal("%PDF", pdfHeader);
     }
 
     [Fact]

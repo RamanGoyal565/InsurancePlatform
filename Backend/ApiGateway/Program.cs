@@ -26,7 +26,7 @@ builder.Services.AddCors(options =>
         policy.WithOrigins(allowedOrigins)
               .AllowAnyHeader()
               .AllowAnyMethod()
-              .AllowCredentials(); // required for httpOnly cookie / Authorization header
+              .AllowCredentials();
     });
 });
 

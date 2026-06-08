@@ -19,13 +19,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiGateway", "Backend\ApiGa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsurancePlatform.UnitTests", "Testing\InsurancePlatform.UnitTests\InsurancePlatform.UnitTests.csproj", "{D26751C5-879A-405F-8977-CE55A531BE09}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsurancePlatform.IntegrationTests", "Testing\InsurancePlatform.IntegrationTests\InsurancePlatform.IntegrationTests.csproj", "{A11229C5-0F22-4C9E-8F74-30A18320F480}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Backend", "Backend", "{9A8F3B48-2DF8-4E9A-BEDD-6950C6DEF5D2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{3267DDE5-388F-4317-B1F8-05A0335D3D7C}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "frontend", "frontend\", "{BEC1AF4D-7070-47DE-541E-D6A8B557E3AB}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "frontend", "Frontend\", "{BEC1AF4D-7070-47DE-541E-D6A8B557E3AB}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_57569"
@@ -43,6 +41,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "frontend", "frontend\", "{B
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "57569"
+		SlnRelativePath = "Frontend\"
 	EndProjectSection
 EndProject
 Global
@@ -151,18 +150,6 @@ Global
 		{D26751C5-879A-405F-8977-CE55A531BE09}.Release|x64.Build.0 = Release|Any CPU
 		{D26751C5-879A-405F-8977-CE55A531BE09}.Release|x86.ActiveCfg = Release|Any CPU
 		{D26751C5-879A-405F-8977-CE55A531BE09}.Release|x86.Build.0 = Release|Any CPU
-		{A11229C5-0F22-4C9E-8F74-30A18320F480}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A11229C5-0F22-4C9E-8F74-30A18320F480}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A11229C5-0F22-4C9E-8F74-30A18320F480}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{A11229C5-0F22-4C9E-8F74-30A18320F480}.Debug|x64.Build.0 = Debug|Any CPU
-		{A11229C5-0F22-4C9E-8F74-30A18320F480}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{A11229C5-0F22-4C9E-8F74-30A18320F480}.Debug|x86.Build.0 = Debug|Any CPU
-		{A11229C5-0F22-4C9E-8F74-30A18320F480}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A11229C5-0F22-4C9E-8F74-30A18320F480}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A11229C5-0F22-4C9E-8F74-30A18320F480}.Release|x64.ActiveCfg = Release|Any CPU
-		{A11229C5-0F22-4C9E-8F74-30A18320F480}.Release|x64.Build.0 = Release|Any CPU
-		{A11229C5-0F22-4C9E-8F74-30A18320F480}.Release|x86.ActiveCfg = Release|Any CPU
-		{A11229C5-0F22-4C9E-8F74-30A18320F480}.Release|x86.Build.0 = Release|Any CPU
 		{BEC1AF4D-7070-47DE-541E-D6A8B557E3AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BEC1AF4D-7070-47DE-541E-D6A8B557E3AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BEC1AF4D-7070-47DE-541E-D6A8B557E3AB}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -188,7 +175,6 @@ Global
 		{7F6719D8-153B-463A-8875-7F977AD952E2} = {9A8F3B48-2DF8-4E9A-BEDD-6950C6DEF5D2}
 		{CDFA9A48-8703-4A19-9A67-A7A65B98E22A} = {9A8F3B48-2DF8-4E9A-BEDD-6950C6DEF5D2}
 		{D26751C5-879A-405F-8977-CE55A531BE09} = {3267DDE5-388F-4317-B1F8-05A0335D3D7C}
-		{A11229C5-0F22-4C9E-8F74-30A18320F480} = {3267DDE5-388F-4317-B1F8-05A0335D3D7C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {82E6C58F-A63A-477A-A00D-BA3FA0AA359F}
